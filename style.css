@@ -1,0 +1,180 @@
+/* TODO(you): Write the CSS to finish the assignment! */
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {   
+    width: 700px;
+    margin-bottom: 35vh;
+    font-family: 'Proxima Nova', 'Helvetica', 'Arial', sans-serif;
+    font-size: 18px;
+    color: #222;
+}
+
+.mg-tp-18px {
+    margin-top: 18px;
+}
+/* .mg-tp-18px-for-center {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+.--center-stuff {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hidden {
+    display: none !important;
+}
+.--center-text {
+    text-align: center;
+}
+
+
+.hdr {
+    border: 1px #ccc solid;
+    justify-content: space-between;
+    height: 80px;
+    font-family: "Helvetica", Helvetica, sans-serif;
+}
+.hdr .wpr-red {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ee3322;
+}
+.hdr .mern * {
+    background-color: #ffee00;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    font-weight: bold;
+    transform: rotate(-30deg);
+    margin-left: 10px;
+}
+
+
+
+#quiz-name .title-ctnr {
+    background: url("images/background.jpg");
+    background-size: cover;
+    /* background-position: ; */
+    font-family: 'Pangolin', 'Trebuchet MS', cursive;
+    height: 425px;
+}
+.title-ctnr h1 {
+    background: #fff;
+    padding: 20px;
+    font-size: 60px;
+    color: black;
+}
+#quiz-name p {
+    font-size: 14px;
+    margin-bottom: 48px;
+}
+
+
+button {
+    color: white;
+    padding: 18px;
+    border: none;
+    cursor: pointer;
+    transition: .2s;
+    margin: 18px 0;
+}
+button.--nen-xanh-duong {
+    background-color: #2196F3;
+} button.--nen-xanh-duong:hover {
+    background-color: #0d8bf2;
+}
+button.--nen-xanh-la {
+    background-color: #4CAF50;
+} button.--nen-xanh-la:hover {
+    background-color: #46a049;
+}
+
+
+.ctn-tra-loi {
+    margin: 30px 0;
+}
+.question-ctn .nut-radio + span {
+    margin-left: 15px;
+}
+.ctn-tra-loi .nut-radio-ctn { 
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 1px;
+    background-color: #f1f1f1;
+    transition: .18s;
+}
+.nut-radio + span,
+.nut-radio {
+    z-index: 1;
+    pointer-events: none;
+}.hlt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f1f1f1;
+}.nut-radio-ctn:hover,
+.nut-radio:checked ~ .hlt {
+    background-color: #ddd;
+}
+
+.nut-radio-ctn.correct-yes .hlt {
+    background-color: #d4edda;
+}
+.nut-radio-ctn.correct-oops .hlt {
+    background-color: #ccc;
+}
+.nut-radio-ctn.wrong .hlt {
+    background-color: #f8d7da;
+}
+.right, .wrong {
+    content: "Correct answer";
+    margin-left: auto;
+    background-color: rgba(170, 170, 170, 0.5);
+    border-radius: 3px;
+    padding: 5px;
+    color: white;
+}
+.nut-radio-ctn.wrong::after {
+    content: "Your answer";
+}
+
+.submit-outer {
+    transition: .2s;
+}
+#review-quiz .counter {
+    font-size: 24px;
+}
+
+.card {
+    background-color: #f1f1f1;
+    border: 1px #dcdcdc solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media only screen and (max-width: 700px) {
+    body {
+        width: 95%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .mern {
+        display: none;
+    }
+}
